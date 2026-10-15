@@ -45,6 +45,6 @@ const dx=p.x-m.x,dy=p.y-m.y,md=Math.hypot(dx,dy);if(md<160*devicePixelRatio){p.x
 x.fillStyle='rgba(165,180,252,.9)';x.beginPath();x.arc(p.x,p.y,1.6*devicePixelRatio,0,7);x.fill()}
 for(let i=0;i<P.length;i++)for(let j=i+1;j<P.length;j++){const a=P[i],b=P[j],q=Math.hypot(a.x-b.x,a.y-b.y);if(q<d){x.strokeStyle='rgba(99,102,241,'+(1-q/d)*.5+')';x.lineWidth=devicePixelRatio;x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke()}}
 requestAnimationFrame(tick)}tick();
-const lines=['Building the software of the future.','Apps that feel like tomorrow.','AI-first. Human-centered.','Something big is loading...'];let li=0,ci=0,del=false;const t=document.getElementById('t');
+const lines=['Building the software of the future.','Apps that feel like tomorrow.','AI-first. Human-centered.','All your base are belong to us.','Something big is loading...'];let li=0,ci=0,del=false;const t=document.getElementById('t');
 (function type(){const s=lines[li];t.textContent=s.slice(0,ci);if(!del&&ci<s.length){ci++;setTimeout(type,55)}else if(!del){del=true;setTimeout(type,1800)}else if(ci>0){ci--;setTimeout(type,25)}else{del=false;li=(li+1)%lines.length;setTimeout(type,300)}})();
 </script></body></html>
