@@ -51,10 +51,10 @@ h2{font-size:clamp(1.6rem,3.2vw,2.2rem);font-weight:800}
 
 /* App cards */
 .app{display:flex;flex-direction:column;overflow:hidden;padding:0}
-.app-media{aspect-ratio:4/3;display:grid;place-items:center;color:#fff;position:relative;overflow:hidden}
-.app-media svg{width:84px;height:84px;opacity:.95}
-.media-lang{background:linear-gradient(135deg,#6366f1,#a855f7)}
-.media-skin{background:linear-gradient(135deg,#f472b6,#fb923c)}
+.app-media{aspect-ratio:4/3;display:grid;place-items:center;color:#fff;position:relative;overflow:hidden;background:#e8e9f2}
+.app-media img.photo{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.media-lang{background:#ddd6fe}
+.media-skin{background:#fbcfe8}
 .media-soccer{background:linear-gradient(180deg,#1f5e3a,#2f8a4f);align-items:start}
 .media-soccer img{width:62%;margin-top:1.25rem;border-radius:18px;box-shadow:0 14px 30px rgba(0,0,0,.35);border:4px solid #0f2d1c}
 .app-body{padding:1.4rem 1.5rem 1.6rem;display:flex;flex-direction:column;gap:.2rem;flex:1}
