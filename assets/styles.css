@@ -50,16 +50,23 @@ h2{font-size:clamp(1.6rem,3.2vw,2.2rem);font-weight:800}
 .alt{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 
 /* App cards */
-.app{display:flex;flex-direction:column;overflow:hidden;padding:0}
-.app-media{aspect-ratio:4/3;display:grid;place-items:center;color:#fff;position:relative;overflow:hidden;background:#e8e9f2}
-.app-media img.photo{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
-.media-lang{background:#ddd6fe}
-.media-skin{background:#fbcfe8}
-.media-soccer{background:linear-gradient(180deg,#1f5e3a,#2f8a4f);align-items:start}
-.media-soccer img{width:62%;margin-top:1.25rem;border-radius:18px;box-shadow:0 14px 30px rgba(0,0,0,.35);border:4px solid #0f2d1c}
-.app-body{padding:1.4rem 1.5rem 1.6rem;display:flex;flex-direction:column;gap:.2rem;flex:1}
-.badge{align-self:flex-start;font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.25rem .6rem;border-radius:999px;background:#fff7e6;color:#8a4b00;border:1px solid #fde2b5;margin-bottom:.5rem}
-.platforms{font-size:.9rem;font-weight:600;color:var(--ink);margin-top:auto!important}
+.apps-grid{align-items:stretch}
+.app{display:flex;flex-direction:column;overflow:hidden;padding:0;height:100%}
+.app-media{aspect-ratio:3/4;display:grid;place-items:center;color:#fff;position:relative;overflow:hidden;padding:1.35rem 0 1.1rem;background:#e8e9f2}
+.media-lang{background:radial-gradient(80% 70% at 50% 20%,#c4b5fd,transparent 70%),linear-gradient(160deg,#ede9fe,#ddd6fe)}
+.media-skin{background:radial-gradient(80% 70% at 50% 20%,#f9a8d4,transparent 70%),linear-gradient(160deg,#ffe4e6,#fbcfe8)}
+.media-soccer{background:radial-gradient(80% 70% at 50% 15%,rgba(255,255,255,.18),transparent 55%),linear-gradient(180deg,#1f5e3a,#2f8a4f)}
+.phone-frame{width:min(52%,180px);aspect-ratio:9/19.5;background:linear-gradient(160deg,#1c1d2a,#0b0c14);border-radius:28px;padding:11px 9px;box-shadow:0 18px 36px rgba(15,16,36,.35),inset 0 0 0 1px rgba(255,255,255,.08);position:relative}
+.phone-frame::before{content:"";position:absolute;top:16px;left:50%;transform:translateX(-50%);width:34%;height:7px;background:#0b0c14;border-radius:999px;z-index:2;box-shadow:0 0 0 1px rgba(255,255,255,.06)}
+.phone-frame::after{content:"";position:absolute;inset:0;border-radius:28px;pointer-events:none;box-shadow:inset 0 0 0 2px #2a2d3f}
+.phone-screen{width:100%;height:100%;border-radius:20px;overflow:hidden;background:#111;position:relative}
+.phone-screen img,.phone-screen img.photo{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;max-width:none}
+.phone-frame-tall .phone-screen img{object-fit:cover;object-position:center top}
+.app-body{padding:1.35rem 1.45rem 1.55rem;display:flex;flex-direction:column;gap:.55rem;flex:1}
+.app-body>p{margin:0}
+.app-body h3{margin:0 0 .15rem;font-size:1.3rem}
+.badge{align-self:flex-start;font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.25rem .6rem;border-radius:999px;background:#fff7e6;color:#8a4b00;border:1px solid #fde2b5;margin:0 0 .15rem}
+.platforms{font-size:.92rem;font-weight:700;color:var(--ink);margin-top:auto!important;padding-top:.4rem}
 
 /* Contact */
 .contact-list{list-style:none;padding:0;margin:0;display:grid;gap:.9rem}
@@ -105,6 +112,6 @@ address{font-style:normal}
   .hero .wrap{padding-top:3rem;padding-bottom:3rem}
   section{padding:3rem 0}
   .toc ol{columns:1}
-  .media-soccer img{width:56%}
+  .phone-frame{width:min(48%,160px)}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
