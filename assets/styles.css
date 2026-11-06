@@ -56,12 +56,21 @@ h2{font-size:clamp(1.6rem,3.2vw,2.2rem);font-weight:800}
 .media-lang{background:radial-gradient(80% 70% at 50% 20%,#c4b5fd,transparent 70%),linear-gradient(160deg,#ede9fe,#ddd6fe)}
 .media-skin{background:radial-gradient(80% 70% at 50% 20%,#f9a8d4,transparent 70%),linear-gradient(160deg,#ffe4e6,#fbcfe8)}
 .media-soccer{background:radial-gradient(80% 70% at 50% 15%,rgba(255,255,255,.18),transparent 55%),linear-gradient(180deg,#1f5e3a,#2f8a4f)}
-.phone-frame{width:min(52%,180px);aspect-ratio:9/19.5;background:linear-gradient(160deg,#1c1d2a,#0b0c14);border-radius:28px;padding:11px 9px;box-shadow:0 18px 36px rgba(15,16,36,.35),inset 0 0 0 1px rgba(255,255,255,.08);position:relative}
+.phone-frame{width:min(52%,180px);aspect-ratio:9/19.5;background:linear-gradient(160deg,#1c1d2a,#0b0c14);border-radius:28px;padding:11px 9px;box-shadow:0 18px 36px rgba(15,16,36,.35),inset 0 0 0 1px rgba(255,255,255,.08);position:relative;margin:0 auto;display:block}
 .phone-frame::before{content:"";position:absolute;top:16px;left:50%;transform:translateX(-50%);width:34%;height:7px;background:#0b0c14;border-radius:999px;z-index:2;box-shadow:0 0 0 1px rgba(255,255,255,.06)}
-.phone-frame::after{content:"";position:absolute;inset:0;border-radius:28px;pointer-events:none;box-shadow:inset 0 0 0 2px #2a2d3f}
-.phone-screen{width:100%;height:100%;border-radius:20px;overflow:hidden;background:#111;position:relative}
-.phone-screen img,.phone-screen img.photo{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;max-width:none}
-.phone-frame-tall .phone-screen img{object-fit:cover;object-position:center top}
+.phone-frame::after{content:"";position:absolute;inset:0;border-radius:28px;pointer-events:none;box-shadow:inset 0 0 0 2px #2a2d3f;z-index:3}
+.phone-screen{position:absolute;inset:11px 9px;border-radius:20px;overflow:hidden;background:#0f1018;display:flex;flex-direction:column}
+.phone-appbar{flex:none;z-index:1;padding:22px 10px 9px;text-align:center;background:rgba(15,16,24,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.08)}
+.phone-app-name{display:block;font-size:.72rem;font-weight:700;letter-spacing:.01em;line-height:1.2;color:#f5f6ff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.media-lang .phone-appbar{background:linear-gradient(180deg,#4c1d95,#5b21b6)}
+.media-skin .phone-appbar{background:linear-gradient(180deg,#9d174d,#db2777)}
+.media-soccer .phone-appbar{background:linear-gradient(180deg,#14532d,#166534)}
+.phone-app-art{position:relative;flex:1;min-height:0;background:#0f1018}
+.phone-app-art img,.phone-app-art img.photo{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:center center;display:block}
+.media-lang .phone-app-art img{object-position:50% 42%}
+.media-skin .phone-app-art img{object-position:50% 40%}
+.media-soccer .phone-app-art{background:#0b1a12}
+.media-soccer .phone-app-art img{object-fit:contain;object-position:center center}
 .app-body{padding:1.35rem 1.45rem 1.55rem;display:flex;flex-direction:column;gap:.55rem;flex:1}
 .app-body>p{margin:0}
 .app-body h3{margin:0 0 .15rem;font-size:1.3rem}
