@@ -1,50 +1,140 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>HGA Labs — Building the software of the future</title>
-<meta name="description" content="HGA Labs builds the software of the future. Coming soon.">
-<style>
-*{box-sizing:border-box}html,body{margin:0;height:100%;overflow:hidden;background:#04030c;color:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,sans-serif}
-canvas{position:fixed;inset:0;width:100%;height:100%}
-.glow{position:fixed;inset:0;background:radial-gradient(60% 50% at 50% 45%,rgba(99,102,241,.28),transparent 70%),radial-gradient(40% 40% at 80% 80%,rgba(34,211,238,.15),transparent 70%);animation:pulse 6s ease-in-out infinite}
-@keyframes pulse{50%{opacity:.55}}
-.grid{position:fixed;left:-50%;right:-50%;bottom:-10%;height:55%;background-image:linear-gradient(rgba(99,102,241,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(99,102,241,.5) 1px,transparent 1px);background-size:60px 60px;transform:perspective(380px) rotateX(62deg);animation:move 2.4s linear infinite;mask-image:linear-gradient(transparent,#000 60%);-webkit-mask-image:linear-gradient(transparent,#000 60%)}
-@keyframes move{to{background-position:0 60px}}
-main{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px}
-.pill{font-size:.8rem;letter-spacing:.35em;text-transform:uppercase;padding:.5rem 1.1rem;border:1px solid rgba(255,255,255,.3);border-radius:999px;backdrop-filter:blur(6px);margin-bottom:1.6rem;animation:fade 1.4s both}
-h1{margin:0;font-size:clamp(3rem,13vw,9rem);font-weight:800;letter-spacing:-.04em;line-height:1;background:linear-gradient(100deg,#fff 20%,#a5b4fc 40%,#22d3ee 60%,#fff 80%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 5s linear infinite,rise 1.2s .2s both;position:relative}
-h1::before,h1::after{content:attr(data-t);position:absolute;inset:0;background:inherit;-webkit-background-clip:text;background-clip:text;color:transparent;opacity:.0;animation:glitch 6s infinite}
-h1::before{transform:translate(3px,0);filter:drop-shadow(-2px 0 #f0abfc)}h1::after{transform:translate(-3px,0);filter:drop-shadow(2px 0 #22d3ee)}
-@keyframes glitch{0%,92%,100%{opacity:0}93%,96%{opacity:.8;clip-path:inset(20% 0 55% 0)}94%{clip-path:inset(60% 0 10% 0)}95%{clip-path:inset(5% 0 80% 0)}}
-@keyframes shine{to{background-position:-250% 0}}
-@keyframes rise{from{opacity:0;transform:translateY(30px) scale(.96);filter:blur(12px)}}
-@keyframes fade{from{opacity:0}}
-.tag{margin:1.4rem 0 0;font-size:clamp(1.05rem,2.6vw,1.6rem);color:#c7d2fe;min-height:2em;animation:fade 2s .6s both}
-.tag span{border-right:2px solid #22d3ee;padding-right:4px;animation:blink 1s steps(1) infinite}
-@keyframes blink{50%{border-color:transparent}}
-.cta{margin-top:2.2rem;animation:fade 2s 1s both}
-.cta a{color:#fff;text-decoration:none;padding:.85rem 1.6rem;border-radius:999px;background:linear-gradient(90deg,#6366f1,#22d3ee);box-shadow:0 0 30px rgba(99,102,241,.6);display:inline-block;transition:transform .2s,box-shadow .2s}
-.cta a:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 0 50px rgba(34,211,238,.7)}
-footer{position:fixed;bottom:14px;left:0;right:0;text-align:center;font-size:.8rem;opacity:.5;z-index:2}
-@media (prefers-reduced-motion:reduce){*{animation:none!important}}
-</style></head><body>
-<canvas id="c"></canvas><div class="glow"></div><div class="grid"></div>
-<main>
-<div class="pill">Coming soon</div>
-<h1 data-t="HGA Labs">HGA Labs</h1>
-<p class="tag"><span id="t"></span></p>
-<div class="cta"><a href="mailto:support@hgalabs.com">Get in touch</a></div>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HGA Labs LLC | Consumer mobile and web apps</title>
+<meta name="description" content="HGA Labs LLC is a software development company in Huntingdon Valley, PA, building consumer mobile and web apps, including Language Partner and Soccer Spots.">
+<meta name="theme-color" content="#4f46e5">
+<meta property="og:site_name" content="HGA Labs">
+<meta property="og:title" content="HGA Labs LLC | Consumer mobile and web apps">
+<meta property="og:description" content="HGA Labs LLC is a software development company in Huntingdon Valley, PA, building consumer mobile and web apps, including Language Partner and Soccer Spots.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hgalabs.com/">
+<link rel="canonical" href="https://hgalabs.com/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="HGA Labs home"><span class="brand-mark" aria-hidden="true">HGA</span>HGA Labs</a>
+    <nav class="nav" aria-label="Main">
+      <ul><li><a href="/" aria-current="page">Home</a></li><li><a href="/#apps">Apps</a></li><li><a href="/support.html">Support</a></li><li><a href="/privacy.html">Privacy</a></li><li><a href="/terms.html">Terms</a></li></ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap">
+    <p class="eyebrow">Software development company</p>
+    <h1 id="hero-title">We build <span>consumer mobile and web apps</span>.</h1>
+    <p class="lede">HGA Labs LLC is an independent software development company in Huntingdon Valley, Pennsylvania. We design and build helpful, friendly apps for iPhone, Android and the web, using modern AI where it genuinely makes everyday life easier.</p>
+    <div class="btns">
+      <a class="btn btn-primary" href="#apps">See our apps</a>
+      <a class="btn btn-ghost" href="#contact">Contact us</a>
+    </div>
+  </div>
+</section>
+
+<section id="about" aria-labelledby="about-title">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="about-title">About HGA Labs</h2>
+      <p>We are a small, product-focused studio. We take ideas from first sketch to a polished app, and we care about privacy, accessibility and clear design.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card"><h3>Mobile apps</h3><p>Native-feeling apps for iPhone and Android, built for quick, everyday use.</p></div>
+      <div class="card"><h3>Web apps</h3><p>Fast, responsive web experiences that work on any device, with no install required.</p></div>
+      <div class="card"><h3>Practical AI</h3><p>We use AI features, such as conversation and image analysis, only where they make an app more useful.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="apps" class="alt" aria-labelledby="apps-title">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="apps-title">Our apps</h2>
+      <p>Here is what we are working on now. These apps are not released yet, so check back soon.</p>
+    </div>
+    <div class="grid-3">
+      <article class="card app" aria-labelledby="app-lang">
+        <div class="app-media media-lang"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.6A8 8 0 1 1 21 12z"/><path d="M8.5 11h.01M12 11h.01M15.5 11h.01" stroke-width="2.6" stroke-linecap="round"/></svg></div>
+        <div class="app-body">
+          <span class="badge">Coming soon</span>
+          <h3 id="app-lang">Language Partner</h3>
+          <p>An AI conversation partner for practicing a new language through natural, everyday conversation.</p>
+        </div>
+      </article>
+      <article class="card app" aria-labelledby="app-skin">
+        <div class="app-media media-skin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="5"/><path d="M10.2 11h.01M13.8 11h.01" stroke-width="2.4" stroke-linecap="round"/><path d="M10.3 13.6c1 .8 2.4.8 3.4 0"/></svg></div>
+        <div class="app-body">
+          <span class="badge">Coming soon</span>
+          <h3 id="app-skin">Skincare app <small>(name coming soon)</small></h3>
+          <p>AI skin analysis using your phone&rsquo;s camera, with personalized skincare routines.</p>
+        </div>
+      </article>
+      <article class="card app" aria-labelledby="app-soccer">
+        <div class="app-media media-soccer">
+          <img src="/assets/soccer-spots.png" width="560" height="1215" loading="lazy" alt="Soccer Spots game screen: a soccer field where the player drags numbered teammate dots into position, with a coach tip at the bottom of the screen.">
+        </div>
+        <div class="app-body">
+          <span class="badge">Coming soon</span>
+          <h3 id="app-soccer">Soccer Spots</h3>
+          <p>Soccer Spots teaches young players where to stand, because every player has a spot. Kids drag their teammates&rsquo; dots onto the field, then watch the play run to see why each spot matters, with a friendly coach narrating. There are bite-size Practice Plays, a Live Match, Free Play and mini-games, plus a Coach&rsquo;s Corner of drills for grown-ups who run practice.</p>
+          <p class="platforms">Coming soon to iPhone and the web.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="contact" aria-labelledby="contact-title">
+  <div class="wrap">
+    <div class="grid-2">
+      <div>
+        <h2 id="contact-title">Contact us</h2>
+        <p class="note">Questions, feedback or support requests are welcome. We usually reply within one business day. For app help, see our <a href="/support.html">Support page</a>.</p>
+      </div>
+      <div class="card">
+        <ul class="contact-list">
+          <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><div><strong>Email</strong><a href="mailto:support@hgalabs.com">support@hgalabs.com</a></div></li>
+          <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><div><strong>Call or text</strong><a href="tel:+12672914723">(267) 291-4723</a><div class="note">Texting gets the fastest reply.</div></div></li>
+          <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><strong>Mailing address</strong><address>HGA Labs LLC<br>3370 Brae Bourn Dr<br>Huntingdon Valley, PA 19006</address></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 </main>
-<footer>&copy; 2026 HGA Labs LLC &middot; support@hgalabs.com</footer>
-<script>
-const c=document.getElementById('c'),x=c.getContext('2d');let W,H,P=[],m={x:-999,y:-999};
-function size(){W=c.width=innerWidth*devicePixelRatio;H=c.height=innerHeight*devicePixelRatio;const n=Math.min(130,Math.floor(innerWidth/9));P=Array.from({length:n},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.6*devicePixelRatio,vy:(Math.random()-.5)*.6*devicePixelRatio}))}
-addEventListener('resize',size);addEventListener('pointermove',e=>{m.x=e.clientX*devicePixelRatio;m.y=e.clientY*devicePixelRatio});size();
-function tick(){x.clearRect(0,0,W,H);const d=130*devicePixelRatio;
-for(const p of P){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
-const dx=p.x-m.x,dy=p.y-m.y,md=Math.hypot(dx,dy);if(md<160*devicePixelRatio){p.x+=dx/md*1.5;p.y+=dy/md*1.5}
-x.fillStyle='rgba(165,180,252,.9)';x.beginPath();x.arc(p.x,p.y,1.6*devicePixelRatio,0,7);x.fill()}
-for(let i=0;i<P.length;i++)for(let j=i+1;j<P.length;j++){const a=P[i],b=P[j],q=Math.hypot(a.x-b.x,a.y-b.y);if(q<d){x.strokeStyle='rgba(99,102,241,'+(1-q/d)*.5+')';x.lineWidth=devicePixelRatio;x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke()}}
-requestAnimationFrame(tick)}tick();
-const lines=['Building the software of the future.','Apps that feel like tomorrow.','AI-first. Human-centered.','All your base are belong to us.','Something big is loading...'];let li=0,ci=0,del=false;const t=document.getElementById('t');
-(function type(){const s=lines[li];t.textContent=s.slice(0,ci);if(!del&&ci<s.length){ci++;setTimeout(type,55)}else if(!del){del=true;setTimeout(type,1800)}else if(ci>0){ci--;setTimeout(type,25)}else{del=false;li=(li+1)%lines.length;setTimeout(type,300)}})();
-</script></body></html>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-brand">HGA Labs LLC</p>
+        <address>3370 Brae Bourn Dr<br>Huntingdon Valley, PA 19006<br>United States</address>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="mailto:support@hgalabs.com">support@hgalabs.com</a></li>
+          <li><a href="tel:+12672914723">(267) 291-4723</a> (call or text)</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Company</h2>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/#apps">Apps</a></li>
+          <li><a href="/support.html">Support</a></li>
+          <li><a href="/privacy.html">Privacy Policy</a></li>
+          <li><a href="/terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2026 HGA Labs LLC. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>
