@@ -2,7 +2,7 @@
 
 Local copies used on the HGA Labs public site. Photos are illustrative stock imagery, not product UI screenshots.
 
-## LingoBloom card — `lingobloom.jpg`
+## LingoSphere card — `lingosphere.jpg`
 
 - Source page: https://www.pexels.com/photo/a-woman-holding-a-printed-paper-while-on-a-video-call-6671599/
 - Photographer: Tima Miroshnichenko
